@@ -3,6 +3,7 @@ public class Test
 {
 	public static void main(String[] args)
 	{
-		new Gui();
+		Gui gui = new Gui();
+		gui.setVisible(true);
 	}
 }
