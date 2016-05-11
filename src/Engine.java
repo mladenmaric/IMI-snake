@@ -169,23 +169,23 @@ public class Engine
 		}
 	}
 	
-	public String toString()
-	{
-		String s = "";
-		
-		for (int i = 0; i < 15; s += "\n", i++)
-			for (int j = 0; j < 15; j++)
-				if (tabla[i][j].getStanje() == Stanje.GLAVA)
-					s += " X ";
-				else if (tabla[i][j].getStanje() == Stanje.TELO)
-					s += " O ";
-				else if (tabla[i][j].getStanje() == Stanje.PROFESOR)
-					s += " P ";
-				else if (tabla[i][j].getStanje() == Stanje.PRAZNO)
-					s += " - ";
-				else s += "   ";
-		
-		return s;
-	}
+//	public String toString()
+//	{
+//		String s = "";
+//		
+//		for (int i = 0; i < 15; s += "\n", i++)
+//			for (int j = 0; j < 15; j++)
+//				if (tabla[i][j].getStanje() == Stanje.GLAVA)
+//					s += " X ";
+//				else if (tabla[i][j].getStanje() == Stanje.TELO)
+//					s += " O ";
+//				else if (tabla[i][j].getStanje() == Stanje.PROFESOR)
+//					s += " P ";
+//				else if (tabla[i][j].getStanje() == Stanje.PRAZNO)
+//					s += " - ";
+//				else s += "   ";
+//		
+//		return s;
+//	}
 	
 }
