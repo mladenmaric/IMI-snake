@@ -5,7 +5,5 @@ public class Test
 	{
 		Gui gui = new Gui();
 		gui.setVisible(true);
-		
-		gui.removeAll();
 	}
 }
