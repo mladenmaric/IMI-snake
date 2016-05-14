@@ -118,7 +118,9 @@ public class Gui extends JFrame
 
 	private void setWindow()
 	{
-		setBounds(200, 50, 400, 400);
+		setResizable(false);
+		setSize(new Dimension(800, 650));
+		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
 		pack();
