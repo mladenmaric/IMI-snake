@@ -170,7 +170,7 @@ public class Gui extends JFrame
 				dugmici[i][j].setBackground(Color.WHITE);
 				dugmici[i][j].setPreferredSize(new Dimension(40, 40));
 				
-				center.add(dugmici[i][j]);
+				center.add(dugmici[i][j], 15 * i + j);
 			}
 		
 		getContentPane().add(center, BorderLayout.CENTER);
