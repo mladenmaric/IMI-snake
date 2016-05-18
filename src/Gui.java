@@ -42,7 +42,7 @@ public class Gui extends JFrame
 
 	private void setIconsAndSpeed()
 	{
-	    snake = new ImageIcon(getClass().getResource("/zmija2.jfif"));
+	    snake = new ImageIcon(getClass().getResource("/snake.png"));
 	    teloZmije = new ImageIcon(getClass().getResource("/krug.png"));
 	    trenProfesor = new ImageIcon(getClass().getResource("/Ana.jpg"));
 	    glavaZmije = new ImageIcon(getClass().getResource("/imi.jpg"));
