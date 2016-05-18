@@ -42,10 +42,10 @@ public class Gui extends JFrame
 
 	private void setIconsAndSpeed()
 	{
-	    snake = new ImageIcon(Thread.currentThread().getContextClassLoader().getResource("./images/zmija2.jfif"));
-	    teloZmije = new ImageIcon(Thread.currentThread().getContextClassLoader().getResource("./images/krug.png"));
-	    trenProfesor = new ImageIcon(Thread.currentThread().getContextClassLoader().getResource("./images/Ana.jpg"));
-	    glavaZmije = new ImageIcon(Thread.currentThread().getContextClassLoader().getResource("./images/imi.jpg"));
+	    snake = new ImageIcon(getClass().getResource("/zmija2.jfif"));
+	    teloZmije = new ImageIcon(getClass().getResource("/krug.png"));
+	    trenProfesor = new ImageIcon(getClass().getResource("/Ana.jpg"));
+	    glavaZmije = new ImageIcon(getClass().getResource("/imi.jpg"));
 	    brzinaPomeranja = 1000;
 	}
 
@@ -64,7 +64,7 @@ public class Gui extends JFrame
 				@SuppressWarnings("unchecked")
 				JComboBox<Object> p = (JComboBox<Object>)e.getSource();
 				
-				trenProfesor = new ImageIcon(getClass().getResource("./images/" + p.getSelectedItem().toString() + ".jpg"));
+				trenProfesor = new ImageIcon(getClass().getResource(p.getSelectedItem().toString() + ".jpg"));
 				osveziGui();
 				requestFocusInWindow();
 			}
