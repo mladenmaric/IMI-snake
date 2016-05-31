@@ -1,5 +1,10 @@
+package gui;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+
+import engine.Engine;
+import engine.Smer;
 
 public class MyKeyListener implements KeyListener
 {
@@ -10,14 +15,9 @@ public class MyKeyListener implements KeyListener
 		this.engine = engine;
 	}
 	
-	@Override
-	public void keyTyped(KeyEvent e)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-	
-	@Override
+	public void keyTyped(KeyEvent e) {}
+	public void keyReleased(KeyEvent e) {}
+
 	public void keyPressed(KeyEvent e)
 	{
 		int key = e.getKeyCode();
@@ -25,32 +25,27 @@ public class MyKeyListener implements KeyListener
 		switch (key)
 		{
 			case KeyEvent.VK_LEFT:				
-				engine.setTrenutniSmer(Smer.LEVO);
+				if (engine.getTrenutniSmer() != Smer.DESNO) 
+					engine.setTrenutniSmer(Smer.LEVO);
 				break;
 			
 			case KeyEvent.VK_UP:
-				engine.setTrenutniSmer(Smer.GORE);
+				if (engine.getTrenutniSmer() != Smer.DOLE)
+					engine.setTrenutniSmer(Smer.GORE);
 				break;
 				
 			case KeyEvent.VK_RIGHT:
-				engine.setTrenutniSmer(Smer.DESNO);
+				if (engine.getTrenutniSmer() != Smer.LEVO)
+					engine.setTrenutniSmer(Smer.DESNO);
 				break;
 				
 			case KeyEvent.VK_DOWN:
-				engine.setTrenutniSmer(Smer.DOLE);
+				if (engine.getTrenutniSmer() != Smer.GORE)
+					engine.setTrenutniSmer(Smer.DOLE);
 				break;
 				
 			default:
 				break;
 		}
-		
 	}
-	
-	@Override
-	public void keyReleased(KeyEvent e)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-	
 }
